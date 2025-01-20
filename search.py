@@ -1,3 +1,5 @@
+from colorama import Fore
+
 class Search:
     def __init__(self, db_manager):
         """
@@ -31,7 +33,7 @@ class Search:
                 insert_query = "INSERT INTO query_logs (query_text, count) VALUES (%s, 1)"
                 self.db_manager.execute_query(insert_query, params)
         except Exception as e:
-            print(f"Error logging query: {e}")
+            print(f"{Fore.RED}Error logging query: {e}")
 
     def by_title(self, title: str) -> list[dict]:
         """
@@ -160,7 +162,7 @@ class Search:
             list[dict]: A list of movies matching the criteria.
         """
         if operator not in ('>', '<', '='):
-            raise ValueError("Invalid operator. Only >, <, = are allowed.")
+            raise ValueError(f"{Fore.RED}Invalid operator. Only >, <, = are allowed.")
 
         query = f"""
             SELECT *

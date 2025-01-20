@@ -1,6 +1,7 @@
 import mysql.connector
 import os
 from dotenv import load_dotenv
+from colorama import Fore
 
 
 class DBManager:
@@ -23,8 +24,7 @@ class DBManager:
             )
             self.cursor = self.connection.cursor(dictionary=True)
         except mysql.connector.Error as err:
-            print(f"Error connecting to database: {err}")
-            raise
+            raise ConnectionError(f"Error connecting to database: {err}")
 
     def execute_query(self, query: str, params: tuple = None) -> list[dict]:
         """
@@ -45,8 +45,7 @@ class DBManager:
                 self.connection.commit()
                 return []
         except mysql.connector.Error as err:
-            print(f"Error executing query: {err}")
-            return []
+            raise RuntimeError(f"Error executing query: {err}")
 
     def close(self) -> None:
         """
@@ -61,4 +60,4 @@ class DBManager:
             if self.connection:
                 self.connection.close()
         except mysql.connector.Error as err:
-            print(f"Error closing database connection: {err}")
+            raise RuntimeError(f"Error closing database connection: {err}")
