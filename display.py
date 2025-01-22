@@ -45,24 +45,10 @@ class Display:
 
         print(f"{Fore.CYAN}\nSearch Results:")
         for idx, row in enumerate(results, start=1):
-            title = row.get('title', 'N/A')
-            description = row.get('description', 'N/A')
-            release_year = row.get('release_year', 'N/A')
-            category = row.get('category', 'N/A')
-            actors = row.get('actors', 'N/A')
-            price = row.get('price', 'N/A')
-            length = row.get('length', 'N/A')
-            rating = row.get('rating', 'N/A')
-
             print(f"{Fore.CYAN}\nFilm {idx}:")
-            print(f"Title: {title}")
-            print(f"Description: {description}")
-            print(f"Release Year: {release_year}")
-            print(f"Category: {category}")
-            print(f"Actors: {actors}")
-            print(f"Price: {price}")
-            print(f"Length: {length} min")
-            print(f"Rating: {rating}")
+            for key, value in row.items():
+                value = f"{value} min" if key == 'length' else value  # Add 'min' for length field
+                print(f"{key.capitalize()}: {value or 'N/A'}")
 
     def show_categories(self, categories) -> None:
         print(f"{Fore.CYAN}\nAvailable categories:")
