@@ -75,9 +75,7 @@ Database Management (DBManager):
 
 Handles all SQL operations through execute_query.
 Raises exceptions instead of printing errors, allowing better error handling.
-
 Summary of Project Workflow
-
 The user launches the application (main.py).
 The main menu is displayed via Display.show_menu.
 The user selects a menu option, and the application:
@@ -86,63 +84,6 @@ Logs the query for analytics.
 Displays results to the user via Display.
 The user can repeat actions or exit the application.
 Upon exit, the application calls exit_program, closing the database connection and displaying a farewell message.
-
-Paradigms Used in the Project Implementation
-
-1. Object-Oriented Programming (OOP):
-
-The primary paradigm used in the project.
-
-How it’s implemented:
-
-Classes are used to encapsulate functionality and responsibilities:
-
-DBManager: Manages database operations.
-Search: Handles search logic.
-Display: Manages user interaction and information display.
-MainApp: Controls the main application workflow.
-Methods within classes are structured to handle tasks related to their class responsibilities.
-Instances of these classes are created in main.py to ensure modularity and reusability.
-
-2. Modular Programming:
-
-How it’s implemented:
-
-The application logic is divided into separate modules:
-
-db_manager.py: Database management.
-search.py: Search logic.
-display.py: User interface.
-main.py: Integration of all components.
-
-Each module is responsible for its specifi
-
-3. Imperative Programming:
-
-How it’s implemented:
-
-The program executes step-by-step instructions:
-
-Display the menu.
-Receive user input.
-Perform the requested search.
-Display the result
-Clear instructions define what the program should do at each stage.
-
-4. Functional Programming Elements:
-
-While the project is primar
-
-How it’s implemented:
-
-Functions are used for specific tasks (e.g., show_menu, show_results).
-Some methods do not rely on the object's state, such as Display.show_menu, which could potentially be converted to a @staticmethod.
-
-Conclusion:
-
-Primary Paradigm: Object-Oriented Programming.
-Supporting Paradigms: Modular Programming and elements of Imperative Programming.
-The project is designed to be scalable, maintainable, and understandable for other developers.
 
 
 Отчет по проекту "Movie Search Application"
@@ -239,58 +180,3 @@ SQL-запросы используют параметры для предотв
 Отображает результаты через Display.
 Пользователь может продолжить работу или выйти из программы.
 При выходе программа вызывает exit_program, закрывая соединение с базой данных и выводя прощальное сообщение.
-
-В реализации данного проекта были использованы следующие парадиги
-
-1. Объектно-ориентированное программирование (ООП) :
-Основная парадигма, на основе которой строится проект.
-
-Как реализовано :
-
-Используются классы для создания модулей с четко соблюденными ролями:
-
-DBManager: управление базой данных.
-Search: логика поиска.
-Display: получение информации.
-MainApp: управление приложением.
-
-Методы внутри классов организуют функции, связанные с их задачами.
-Экземпляры классов выпуска в main.py, предусматривающие модульность и повторное использование.
-
-2. Модульное программирование :
-
-Как реализовано :
-
-Логика приложения разбита на технические модули:
-
-db_manager.py: управление базой данных.
-search.py: логика поиска.
-display.py: пользовательский интерфейс.
-main.py: объединение всех частей.
-
-Каждый модуль отвечает за свою часть приложения, а именно: медицинскую поддержку и обучение.
-
-3. Императивное программирование :
-
-Как реализовано :
-
-Программа выполняет шаги последовательно:
-
-Отображение меню.
-Получение пользовательского ввода.
-Выполнение поиска.
-Отображение результатов.
-Используются четкие инструкции, которые помогут вам выполнить программу на каждом этапе.
-
-4. Функциональные элементы:
-
-Хотя проект в основном построен на ООП, в нем есть функциональные элементы.
-
-Как реализовано :
-
-Используются функции для выполнения определенных задач (например, show_menu, show_results).
-Некоторые методы, не зависящие от состояния состояния, например, Display.show_menuможно преобразовать в @staticmethod.
-
-Итог:
-Основная парадигма : Объектно-ориентированное программирование.
-Дополнительные парадигмы: Модульное программирование и элементы императивного подключения.
