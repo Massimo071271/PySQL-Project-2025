@@ -144,6 +144,63 @@ Primary Paradigm: Object-Oriented Programming.
 Supporting Paradigms: Modular Programming and elements of Imperative Programming.
 The project is designed to be scalable, maintainable, and understandable for other developers.
 
+Paradigms Used in the Project Implementation
+
+1. Object-Oriented Programming (OOP):
+
+The primary paradigm used in the project.
+
+How it’s implemented:
+
+Classes are used to encapsulate functionality and responsibilities:
+
+DBManager: Manages database operations.
+Search: Handles search logic.
+Display: Manages user interaction and information display.
+MainApp: Controls the main application workflow.
+Methods within classes are structured to handle tasks related to their class responsibilities.
+Instances of these classes are created in main.py to ensure modularity and reusability.
+
+2. Modular Programming:
+
+How it’s implemented:
+
+The application logic is divided into separate modules:
+
+db_manager.py: Database management.
+search.py: Search logic.
+display.py: User interface.
+main.py: Integration of all components.
+
+Each module is responsible for its specifi
+
+3. Imperative Programming:
+
+How it’s implemented:
+
+The program executes step-by-step instructions:
+
+Display the menu.
+Receive user input.
+Perform the requested search.
+Display the result
+Clear instructions define what the program should do at each stage.
+
+4. Functional Programming Elements:
+
+While the project is primar
+
+How it’s implemented:
+
+Functions are used for specific tasks (e.g., show_menu, show_results).
+Some methods do not rely on the object's state, such as Display.show_menu, which could potentially be converted to a @staticmethod.
+
+Conclusion:
+
+Primary Paradigm: Object-Oriented Programming.
+Supporting Paradigms: Modular Programming and elements of Imperative Programming.
+The project is designed to be scalable, maintainable, and understandable for other developers.
+
 
 Отчет по проекту "Movie Search Application"
 
